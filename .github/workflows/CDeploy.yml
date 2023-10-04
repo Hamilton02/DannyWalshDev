@@ -40,7 +40,7 @@ jobs:
           PASSWORD : ${{ secrets.SSH_PASSWORD  }}
         run: |
           echo "$PASSWORD" > private_key && chmod 600 private_key
-          ssh -o StrictHostKeyChecking=no -i private_key ${USERNAME}@${HOSTNAME} 'ls'
+          ssh private_key ${USERNAME}@${HOSTNAME} 'ls'
           
 
 
