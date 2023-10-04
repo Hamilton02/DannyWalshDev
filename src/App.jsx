@@ -10,7 +10,7 @@ import Gallery from './pages/Gallery';
 function App() {
   const [count, setCount] = useState(0)
 
-  return (
+  return ( 
     <BrowserRouter>
       <Routes>
         <Route path="" element={<Layout />}>
