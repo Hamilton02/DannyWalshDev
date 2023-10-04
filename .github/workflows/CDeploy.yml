@@ -18,15 +18,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Setup Node 16.x
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16.x
-          cache: npm
-
       - name: Install dependencies
         run: npm ci
 
@@ -38,9 +29,7 @@ jobs:
           HOSTNAME: ${{ secrets.SSH_HOST_NAME  }}
           USERNAME : ${{ secrets.SSH_USER_NAME  }}
           PASSWORD : ${{ secrets.SSH_PASSWORD  }}
-        run: |
-          echo "$PASSWORD" > private_key && chmod 600 private_key
-          ssh private_key ${USERNAME}@${HOSTNAME} 'ls'
+        run: ssh  ${USERNAME}@${HOSTNAME} 'ls'
           
 
 
