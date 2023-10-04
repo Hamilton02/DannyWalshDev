@@ -38,7 +38,7 @@ jobs:
           HOSTNAME: ${{ secrets.SSH_HOST_NAME  }}
           USERNAME : ${{ secrets.SSH_USER_NAME  }}
           PASSWORD : ${{ secrets.SSH_PASSWORD  }}
-        run: ssh -i ${PASSWORD} ${USERNAME}@${HOSTNAME}
+        run: ssh -i ${PASSWORD} ${USERNAME}@${HOSTNAME} 
           
 
 
