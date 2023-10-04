@@ -1,0 +1,31 @@
+div.art-tile{
+  background: #7a7a7a;
+  text-align: center;
+  position: relative;
+  border-radius: 8px;
+  border: 2px solid black;
+  width: 100%;
+  margin: 2rem 0rem 2rem 0rem;
+}
+
+
+
+div.art-tile > img{
+  height: 300px;
+
+  width: auto;
+  padding: 3rem;
+}
+
+.div.art-tile > h5{
+  text-align: center;
+}
+
+.gallery-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: blueviolet;
+  text-align: center;
+}
