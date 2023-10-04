@@ -21,10 +21,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Setup Node 16.x
+      - name: Setup Node 20.x
         uses: actions/setup-node@v3
         with:
-          node-version: 16.x
+          node-version: 20.x
           cache: npm
 
       - name: Install dependencies
@@ -38,7 +38,7 @@ jobs:
           HOSTNAME: ${{ secrets.SSH_HOST_NAME  }}
           USERNAME : ${{ secrets.SSH_USER_NAME  }}
           PASSWORD : ${{ secrets.SSH_PASSWORD  }}
-        run: ssh  ${USERNAME}@${HOSTNAME} 'ls'
+        run: ssh ${USERNAME}@${HOSTNAME} ${PASSWORD}
           
 
 
