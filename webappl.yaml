@@ -1,0 +1,22 @@
+runtime: nodejs16
+service: web
+instance_class: F4
+handlers:
+- url: /(.*\.js)
+  static_files: dist/\1
+  upload: dist/.*\.js
+  mime_type: text/javascript
+  
+- url: /(.*\..+)$
+  static_files: dist/\1
+  upload: dist/(.*\..+)$
+
+- url: /.*
+  static_files: dist/index.html
+  upload: dist/index.html
+
+automatic_scaling:
+  min_idle_instances: 1
+  max_idle_instances: automatic
+  min_pending_latency: automatic
+  max_pending_latency: automatic

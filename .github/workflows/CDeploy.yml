@@ -1,0 +1,48 @@
+name: Deploy to Web Server from Source
+
+on:
+  push:
+    branches: [ "main" ]
+
+concurrency:
+  group: 'pages'
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    # Add 'id-token' with the intended permissions for workload identity federation
+    permissions:
+      contents: 'read'
+      id-token: 'write'
+
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Node 16.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Rebuild the dist/ directory
+        run: npm run build
+
+      - name: Connect to SSH
+        env:
+          HOSTNAME: ${{ secrets.SSH_HOST_NAME  }}
+          USERNAME : ${{ secrets.SSH_USER_NAME  }}
+          PASSWORD : ${{ secrets.SSH_PASSWORD  }}
+        run: |
+          echo "$PASSWORD" > private_key && chmod 600 private_key
+          ssh -o StrictHostKeyChecking=no -i private_key ${USERNAME}@${HOSTNAME} 'ls'
+          
+
+
+
+      # If required, use the Cloud Run url output in later steps
