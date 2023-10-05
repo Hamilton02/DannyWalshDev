@@ -38,24 +38,36 @@ jobs:
           HOSTNAME: ${{ secrets.SSH_HOST_NAME  }}
           USERNAME : ${{ secrets.SSH_USER_NAME  }}
           PASSWORD : ${{ secrets.SSH_PASSWORD  }}
-        # You may pin to the exact commit or the version.
-        # uses: priradev/ftp-interactions@c5c9d983346d844b474381b43131b289b3be17f1
-        uses: priradev/ftp-interactions@v0.2.9-beta
+         # You may pin to the exact commit or the version.
+        # uses: webitsbr/github-to-ftp@b70bfbf3c11b8efa8bf4cb77308eab9cc5957a6c
+        uses: webitsbr/github-to-ftp@1.0.1
         with:
-          # Address for the FTP host.
-          host: ${secrets.SSH_HOST_NAME }
-          # Port for the FTP host.
-          port: 21 # optional, default is 21
-          # Username for the FTP host.
-          username: secrets.SSH_USER_NAME
-          # Password for the FTP host.
-          password: secrets.SSH_PASSWORD
-          # Local directory from which to upload.
-          localDir: /Hamilton02/DannyWalshDev/dist # optional, default is /
-          # FTP Action: None | Copy | DeleteAppOfflineHtm.
-          ftpAction: Copy # default is None
-          # Ignore certificate errors.
-          ignoreCertificateErrors: true # optional, default is false
+          # ftp server
+          server: ${HOSTNAME}
+          # ftp username
+          username: ${USERNAME}
+          # ftp password
+          password: ${PASSWORD}
+          # Server port to connect to (read your web hosts docs)
+          port: 21 # optional
+          # protocol to deploy with - ftp, ftps, or ftps-legacy
+          protocol: ftp # optional
+          # Folder to upload from, must end with trailing slash /
+          local-dir: ./ # optional
+          # Path to upload to on the server. Must end with trailing slash /
+          server-dir: ./ # optional
+          # Path and name of the state file - this file is used to track which files have been deployed
+          state-name: # optional
+          # Prints which modifications will be made with current config options, but doesnt actually make any changes
+          dry-run: # optional
+          # Deletes ALL contents of server-dir, even items in excluded with exclude argument
+          dangerous-clean-slate: # optional
+          # An array of glob patterns, these files will not be included in the publish/delete process
+          exclude: # optional
+          # How verbose should the information be - minimal, standard, or verbose
+          log-level: # optional
+          # strict or loose
+          security: # optional
         
 
 
