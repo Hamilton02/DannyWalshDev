@@ -45,7 +45,7 @@ jobs:
           # Address for the FTP host.
           host: ${secrets.SSH_HOST_NAME }
           # Port for the FTP host.
-          port: # optional, default is 21
+          port: 21 # optional, default is 21
           # Username for the FTP host.
           username: secrets.SSH_USER_NAME
           # Password for the FTP host.
@@ -56,6 +56,10 @@ jobs:
           ftpAction: Copy # default is None
           # Ignore certificate errors.
           ignoreCertificateErrors: true # optional, default is false
+        
+
+
+
 
 
 
