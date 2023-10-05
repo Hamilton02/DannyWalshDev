@@ -58,7 +58,6 @@ jobs:
           # Destination folder
           dest: / # optional, default is /
           # For debug
-          dryRun: # optional
 
 
 
