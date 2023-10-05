@@ -43,11 +43,11 @@ jobs:
         uses: webitsbr/github-to-ftp@1.0.1
         with:
           # ftp server
-          server: ${HOSTNAME}
+          server: ftp.dannywalsh.dev
           # ftp username
-          username: ${USERNAME}
+          username: CICD@dannywalsh.dev
           # ftp password
-          password: ${PASSWORD}
+          password:  fI14Kh7(yC]L1y
           # Server port to connect to (read your web hosts docs)
           port: 21 # optional
           # protocol to deploy with - ftp, ftps, or ftps-legacy
