@@ -51,7 +51,7 @@ jobs:
           # Password for the FTP host.
           password: secrets.SSH_PASSWORD
           # Local directory from which to upload.
-          localDir: ../dist # optional, default is /
+          localDir: /Hamilton02/DannyWalshDev/dist # optional, default is /
           # FTP Action: None | Copy | DeleteAppOfflineHtm.
           ftpAction: Copy # default is None
           # Ignore certificate errors.
