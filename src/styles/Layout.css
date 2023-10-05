@@ -7,6 +7,15 @@
   align-items: center;
 }
 
+.white{
+  color: white;
+}
+
+.site-title{
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
 aside.menu{
   display: flex;
   flex-direction: row;
