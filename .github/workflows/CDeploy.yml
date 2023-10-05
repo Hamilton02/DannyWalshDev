@@ -47,7 +47,7 @@ jobs:
           # ftp username
           username: CICD@dannywalsh.dev
           # ftp password
-          password:  fI14Kh7(yC]L1y
+          password: 
           # Server port to connect to (read your web hosts docs)
           port: 21 # optional
           # protocol to deploy with - ftp, ftps, or ftps-legacy
