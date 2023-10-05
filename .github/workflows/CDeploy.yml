@@ -38,8 +38,27 @@ jobs:
           HOSTNAME: ${{ secrets.SSH_HOST_NAME  }}
           USERNAME : ${{ secrets.SSH_USER_NAME  }}
           PASSWORD : ${{ secrets.SSH_PASSWORD  }}
-        run: ssh -i ${PASSWORD} ${USERNAME}@${HOSTNAME} 
-          
+          # You may pin to the exact commit or the version.
+          # uses: airvzxf/ftp-deployment-action@9efe025c218094bd451a0cb684d7cb471f4d9d4f
+
+        # You may pin to the exact commit or the version.
+        # uses: zinh/ftp-uploader-action@10d256274547c8b84848edf454bfeb0b8a451c41
+        uses: zinh/ftp-uploader-action@v0.4
+        with:
+          # Hostname of ftp server, eg: ftpHostname: ftp.test
+          ftpHostname: ${secrets.SSH_HOST_NAME}
+          # User of ftp account
+          ftpUsername: ${secrets.SSH_USER_NAME}
+          # Password of ftp account
+          ftpPassword: ${secrets.SSH_PASSWORD}
+          # List files to upload to ftp server
+          files: dist
+          # Source folder
+          src: # optional, default is 
+          # Destination folder
+          dest: / # optional, default is /
+          # For debug
+          dryRun: # optional
 
 
 
