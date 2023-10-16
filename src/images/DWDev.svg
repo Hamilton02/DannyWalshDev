@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-2 {
+        font-size: 6px;
+      }
+
+      .cls-3 {
+        fill: #8a35ff;
+        font-family: DINCondensed-Bold, 'DIN Condensed';
+        font-weight: 700;
+        stroke: #08004a;
+        stroke-miterlimit: 10;
+        stroke-width: .25px;
+      }
+
+      .cls-4 {
+        font-size: 11px;
+      }
+    </style>
+  </defs>
+  <text class="cls-3" transform="translate(2.46 9.07)"><tspan class="cls-4"><tspan class="cls-1" x="0" y="0">D</tspan><tspan x="4.55" y="0">W</tspan></tspan><tspan class="cls-2"><tspan x="1.37" y="5">.DEV</tspan></tspan></text>
+</svg>

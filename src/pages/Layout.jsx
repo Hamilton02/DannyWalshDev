@@ -1,7 +1,7 @@
 import React from 'react'
 import { useOutlet, Link, useParams } from 'react-router-dom'
 import '../styles/Layout.css'
-import DWDev from '../assets/DWDev.svg'
+import DWDev from '../images/DWDev.svg'
 
 const Layout = () => {
 

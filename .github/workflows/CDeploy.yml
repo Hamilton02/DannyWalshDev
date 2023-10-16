@@ -43,11 +43,11 @@ jobs:
         uses: webitsbr/github-to-ftp@1.0.1
         with:
           # ftp server
-          server: ftp.dannywalsh.dev
+          server: ${{ secrets.SSH_HOST_NAME  }}
           # ftp username
-          username: CICD@dannywalsh.dev
+          username: ${{ secrets.SSH_USER_NAME  }}
           # ftp password
-          password: fqzTie!4FYbH
+          password: ${{ secrets.SSH_PASSWORD  }}
           # Server port to connect to (read your web hosts docs)
           port: 21 # optional
           # protocol to deploy with - ftp, ftps, or ftps-legacy

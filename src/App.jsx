@@ -18,6 +18,7 @@ function App() {
           <Route path='/about' element={<About />} />
           <Route path='/gallery' element={<Gallery />} />
 
+
         </Route>
       </Routes>
   </BrowserRouter>

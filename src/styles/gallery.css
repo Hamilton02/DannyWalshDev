@@ -6,6 +6,7 @@ div.art-tile{
   border: 2px solid black;
   width: 100%;
   margin: 2rem 0rem 2rem 0rem;
+  padding-bottom: 2rem;
 }
 
 
@@ -28,4 +29,27 @@ div.art-tile > img{
   align-items: center;
   background-color: blueviolet;
   text-align: center;
+  position: relative;
+}
+
+.artwork-wrapper[disabled]{
+  opacity: .3;
+  pointer-events: none;
+}
+
+.gallery-frame{
+  align-items: center;
+  position: fixed;
+  justify-content: center;
+  background: black;
+  border-radius: 8px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 4rem;
+}
+
+#framed-art{
+  height: 50vh;
+  width: auto;
 }
