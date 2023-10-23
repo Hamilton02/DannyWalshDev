@@ -1,6 +1,8 @@
 import React from 'react'
 import { Document, Page, pdfjs } from 'react-pdf'
 import DanWalshResume from '../images/ResumeDanWalsh.pdf'
+import 'react-pdf/dist/Page/AnnotationLayer.css';
+import 'react-pdf/dist/Page/TextLayer.css';
 
 
 import '../styles/resume.css'
@@ -21,8 +23,8 @@ const Resume = () => {
         <Document file={resumePdf} >
           <Page pageNumber={1} 
             scale={1.5}               
-            renderAnnotationLayer={false} 
-            renderTextLayer={false}/>
+            renderAnnotationLayer={true} 
+            renderTextLayer={true}/>
         </Document>
       </div>
     </div>
