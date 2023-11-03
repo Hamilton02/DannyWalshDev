@@ -26,6 +26,7 @@ const Layout = () => {
       <aside className='menu'>
         <Link to="/"><h2 className="white site-title">Danny Walsh's Portfolio</h2></Link>
         <Link to="/about"><button>About</button></Link>
+        <Link to='/projects'><button>Projects</button></Link>
         <Link to="/resume"><button>Resume</button></Link>
         <Link to='/gallery'><button>Gallery</button></Link>
         <div className='rightSide'>
