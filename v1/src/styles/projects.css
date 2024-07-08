@@ -1,0 +1,21 @@
+.projects-wrapper{
+  margin-bottom: 3rem;
+  width: 50vw;
+}
+
+.project-header{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.project-header > button{
+  height: 6vh;
+  margin: 1rem;
+}
+
+#cafe-img{
+  height: 50vh;
+  width: auto;
+  min-width: 300px;
+}

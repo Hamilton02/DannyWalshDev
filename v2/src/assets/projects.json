@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Ohlone Heritage Hub",
+    "description": "Working with Dr. Lueck and Dr. Panich, I created the Ohlone Heritage Hub, which is still used by Santa Clara University today to demonstrate how important the Ohlone are to Santa Clara's history.",
+    "link": "https://www.scu.edu/community-heritage-lab/ohlone-heritage-hub/",
+    "tags":["SCU Web Developer", "HTML", "CSS", "Bootstrap", "Javascript"],
+    "img":"https://farm66.static.flickr.com/65535/52003993597_788d032e83_z.jpg",
+    "video": null
+  },
+  {
+    "title": "PortalPortal Demo",
+    "description": "This is a demo video of the platform I worked on from Dec. 2022 to Dec. 2023. I was the sole front end developer for this proof of concept platform.",
+    "link": "",
+    "tags":["PortalPortal", "HTML", "CSS", "React.js", "Javascript", "RESTApi"],
+    "img":"",
+    "video": "https://www.youtube.com/embed/wRRt0xDwryw?si=NtVioR23Kpx2hbcH"
+  },
+  {
+    "title": "Fit4U Demo",
+    "description": "This is my favorite project I worked on while at Santa Clara. My group and I made a full stack workout logging app .",
+    "link": "",
+    "tags":["HTML", "CSS", "React.js", "Javascript", "RESTApi"],
+    "img":"",
+    "video": "https://www.youtube.com/embed/9VuDxbtWGNU?si=xMrUkvYneJ7bcGFs"
+  }
+]

@@ -1,0 +1,55 @@
+/* src/styles.css */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base{
+  button.btn{
+    @apply bg-purple-600 rounded-md w-32 h-10 m-4 hover:ring-2 hover:ring-purple-800;
+  }
+
+  div.hover-up, p.hover-up{
+    @apply transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:bg-purple-400 duration-300;
+  }
+
+
+  div.tag{
+    @apply border-2 p-4 rounded-md border-gray-500 w-48 h-48 hover:border-purple-800 mx-3 md:h-32 md:w-32 flex flex-col justify-center items-center;
+  }
+
+  p.tag-title{
+    @apply opacity-0 duration-500 transition-all  group-hover:ease-in-out group-hover:opacity-100;
+  }
+
+  img.tag-img{
+    @apply translate-y-3 group-hover:-translate-y-1 duration-500 transition;
+  }
+
+  div.center-absolute{
+    @apply fixed z-50 left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2;
+  }
+
+  div.small-menu{
+    @apply flex flex-col justify-center items-center h-1/4 w-1/3 bg-purple-200 block;
+  }
+
+
+}
+
+.expand{
+  position:relative;
+  text-decoration:none;
+  display:inline-block;
+}
+.expand:after {
+  display:block;
+  content: '';
+  border-bottom: solid 3px #FFF;
+  transform: scaleX(0);  
+  transition: transform 250ms ease-in-out;
+  transform-origin:100% 50%
+}
+.expand:hover:after { 
+  transform: scaleX(1);
+  transform-origin:0 50%;
+}
